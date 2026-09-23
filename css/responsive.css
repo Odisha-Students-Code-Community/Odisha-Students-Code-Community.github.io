@@ -1,0 +1,142 @@
+/**
+ * ====================================================================
+ * ODISHA STUDENTS CODE COMMUNITY (OSCC) — RESPONSIVE STYLES
+ * Mobile First & Breakpoint Adaptations
+ * ====================================================================
+ */
+
+/* ====================================================================
+   TABLET BREAKPOINT (<= 992px)
+   ==================================================================== */
+@media (max-width: 992px) {
+  .desktop-nav {
+    display: none;
+  }
+
+  .mobile-toggle {
+    display: flex;
+  }
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+}
+
+/* ====================================================================
+   MOBILE BREAKPOINT (<= 768px)
+   ==================================================================== */
+@media (max-width: 768px) {
+  :root {
+    --header-height: 64px;
+  }
+
+  .sys-ticker-bar {
+    font-size: 0.65rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .ticker-right {
+    display: none; /* Keep ticker concise on small screens */
+  }
+
+  .hero-section {
+    padding: var(--space-8) 0 var(--space-10);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .grid-4, .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .section-block {
+    padding: var(--space-10) 0;
+  }
+
+  .section-header-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+    margin-bottom: var(--space-6);
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-bottom-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .final-cta-box {
+    padding: var(--space-8) var(--space-4);
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .final-cta-actions .btn {
+    width: 100%;
+  }
+
+  /* Workflow mobile adaptation */
+  .workflow-track {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-bar {
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+    flex-wrap: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filter-btn {
+    white-space: nowrap;
+  }
+}
+
+/* ====================================================================
+   SMALL MOBILE BREAKPOINT (<= 480px)
+   ==================================================================== */
+@media (max-width: 480px) {
+  .brand-subtitle {
+    display: none; /* Save navbar space on tiny screens */
+  }
+
+  .brand-badge {
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem;
+    font-size: var(--text-xs);
+  }
+
+  .stat-value {
+    font-size: 1.85rem;
+  }
+}

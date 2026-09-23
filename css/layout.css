@@ -1,0 +1,518 @@
+/**
+ * ====================================================================
+ * ODISHA STUDENTS CODE COMMUNITY (OSCC) — LAYOUT STYLES
+ * ====================================================================
+ */
+
+/* ====================================================================
+   1. SYSTEM TICKER BAR (Top Technical Header)
+   ==================================================================== */
+.sys-ticker-bar {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  font-family: var(--font-mono);
+  font-size: 0.725rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.4rem 1rem;
+  border-bottom: var(--border-medium);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.ticker-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.ticker-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--accent-green);
+}
+
+.ticker-status::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--accent-green);
+  box-shadow: 0 0 5px var(--accent-green);
+}
+
+.ticker-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: #A3A3A3;
+}
+
+/* ====================================================================
+   2. MAIN NAVBAR
+   ==================================================================== */
+.site-header {
+  background: var(--bg-main);
+  border-bottom: var(--border-thick);
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  transition: background 0.2s ease;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 var(--space-4);
+  max-width: var(--container-wide);
+  margin: 0 auto;
+}
+
+/* Brand Identity */
+.brand-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  text-decoration: none;
+}
+
+.brand-badge {
+  width: 44px;
+  height: 44px;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-xs);
+  background: var(--bg-card);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.brand-badge img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  font-family: var(--font-display);
+  font-size: var(--text-lg);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.brand-subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Desktop Nav Links */
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0.25rem;
+  color: var(--text-main);
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--oscc-red);
+}
+
+.nav-link.active {
+  color: var(--oscc-red);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--oscc-red);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Mobile Toggle Hamburger */
+.mobile-toggle {
+  display: none;
+  background: var(--bg-card);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-xs);
+  padding: 0.55rem;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 3px;
+  background: var(--bg-dark);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.mobile-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* ====================================================================
+   3. MOBILE NAVIGATION DRAWER
+   ==================================================================== */
+.mobile-drawer {
+  position: fixed;
+  top: calc(var(--header-height) + 29px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-main);
+  border-top: var(--border-thick);
+  z-index: 850;
+  padding: var(--space-6) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: var(--shadow-xl);
+}
+
+.mobile-drawer.open {
+  transform: translateX(0);
+}
+
+.mobile-drawer-link {
+  font-family: var(--font-display);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: var(--space-3) var(--space-4);
+  background: var(--bg-card);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-drawer-link.active {
+  background: var(--oscc-red);
+  color: var(--text-inverse);
+}
+
+/* ====================================================================
+   4. HERO SECTION (INDUSTRIAL BRUTALISM)
+   ==================================================================== */
+.hero-section {
+  padding: var(--space-12) 0 var(--space-16);
+  border-bottom: var(--border-thick);
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.hero-statement {
+  font-family: var(--font-display);
+  font-size: var(--text-huge);
+  font-weight: 800;
+  line-height: 1.02;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  margin-bottom: var(--space-6);
+}
+
+.hero-statement .highlight-red {
+  color: var(--oscc-red);
+}
+
+.hero-description {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  line-height: 1.5;
+  color: var(--text-main);
+  margin-bottom: var(--space-8);
+  max-width: 780px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-bottom: var(--space-10);
+}
+
+/* Hero Stats Strip */
+.stats-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+/* ====================================================================
+   5. SECTION BLOCKS
+   ==================================================================== */
+.section-block {
+  padding: var(--space-16) 0;
+  border-bottom: var(--border-thick);
+}
+
+.section-block.bg-alt {
+  background: var(--bg-tertiary);
+}
+
+.section-block.bg-dark {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+}
+
+.section-block.bg-dark h2,
+.section-block.bg-dark h3,
+.section-block.bg-dark p {
+  color: var(--text-inverse);
+}
+
+.section-header-wrap {
+  margin-bottom: var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* Grid Layouts */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+/* ====================================================================
+   6. 9-STEP GIT CONTRIBUTION WORKFLOW
+   ==================================================================== */
+.workflow-track {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+  counter-reset: workflow-counter;
+}
+
+.workflow-step-card {
+  background: var(--bg-card);
+  border: var(--border-thick);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.workflow-step-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--oscc-red);
+}
+
+.workflow-step-num {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  color: var(--oscc-red);
+  letter-spacing: 0.1em;
+  margin-bottom: var(--space-2);
+}
+
+.workflow-step-title {
+  font-family: var(--font-display);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--space-2);
+}
+
+.workflow-step-desc {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+
+.workflow-step-code {
+  background: var(--bg-main);
+  border: 1px solid var(--bg-dark);
+  padding: 0.35rem 0.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-main);
+  word-break: break-all;
+}
+
+/* ====================================================================
+   7. FINAL CTA CALLOUT
+   ==================================================================== */
+.final-cta-box {
+  background: var(--oscc-red);
+  color: var(--text-inverse);
+  border: var(--border-thick);
+  border-color: var(--bg-dark);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-12) var(--space-8);
+  text-align: center;
+}
+
+.final-cta-box h2 {
+  color: var(--text-inverse);
+  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  margin-bottom: var(--space-4);
+  line-height: 1.1;
+}
+
+.final-cta-box p {
+  color: #FFF5F5;
+  font-size: var(--text-lg);
+  max-width: 650px;
+  margin: 0 auto var(--space-8);
+}
+
+.final-cta-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+/* ====================================================================
+   8. INDUSTRIAL FOOTER
+   ==================================================================== */
+.site-footer {
+  background: var(--bg-dark);
+  color: var(--text-inverse);
+  border-top: var(--border-thick);
+  padding-top: var(--space-16);
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  gap: var(--space-10);
+  margin-bottom: var(--space-12);
+}
+
+.footer-brand p {
+  color: #A3A3A3;
+  font-size: var(--text-sm);
+  max-width: 340px;
+  margin-top: var(--space-4);
+}
+
+.footer-col h4 {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--oscc-red-light);
+  margin-bottom: var(--space-4);
+}
+
+.footer-nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.footer-nav-link {
+  font-size: var(--text-sm);
+  color: #D4D4D4;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-link:hover {
+  color: var(--oscc-red-light);
+  text-decoration: underline;
+}
+
+.footer-bottom-bar {
+  border-top: 1px solid #333333;
+  padding: var(--space-6) 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: #888888;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.footer-bottom-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}

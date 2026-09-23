@@ -1,0 +1,66 @@
+# ==========================================
+# Odisha Students Code Community - .gitignore
+# ==========================================
+
+# Local Prompts & AI Agent Files
+prompt.md
+*.prompt.md
+.gemini/
+.agents/
+.antigravity/
+
+# Operating System Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Editor & IDE Directories
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.sublime-project
+*.sublime-workspace
+
+# Dependency & Package Managers
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Build Outputs & Bundlers
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.turbo/
+.next/
+.nuxt/
+
+# Static Site Generators (Jekyll / Hugo / Astro)
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Environment Variables & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+
+# Temporary & Log Files
+logs/
+*.log
+*.tmp
+*.temp

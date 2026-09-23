@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Source Projects — Odisha Students Code Community (OSCC) ❤️</title>
+  <meta name="description" content="Discover open-source repositories built by and for students across Odisha. Find beginner-friendly issues, explore codebases, and contribute.">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odisha-students-code-community.github.io/projects.html">
+  <meta property="og:title" content="OSCC Projects Directory ❤️">
+  <meta property="og:description" content="Explore open-source repositories maintained by Odisha Students Code Community.">
+  <meta property="og:image" content="assets/icons/Full-Logo.png">
+
+  <link rel="icon" type="image/png" href="assets/icons/Logo.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-blueprint">
+
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Ticker -->
+  <aside class="sys-ticker-bar" aria-label="System status">
+    <div class="ticker-left">
+      <span class="ticker-status">SYS/STATUS: ONLINE</span>
+      <span>DIRECTORY: PROJECTS</span>
+      <span>INDEXED: 3 REPOS</span>
+    </div>
+    <div class="ticker-right">
+      <span id="ist-clock">IST: --:--:--</span>
+      <span>PUBLIC ACCESS</span>
+    </div>
+  </aside>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="OSCC Home">
+        <div class="brand-badge">
+          <img src="assets/icons/Logo.png" alt="OSCC Logo">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">OSCC <span class="brand-heart">❤️</span></span>
+          <span class="brand-subtitle">Odisha Students Code Community</span>
+        </div>
+      </a>
+
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="contribute.html" class="nav-link">How to Contribute</a>
+        <a href="community.html" class="nav-link">Community</a>
+        <a href="events.html" class="nav-link">Events</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark">
+          GITHUB ORG ↗
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <nav class="mobile-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-drawer-link">01 // HOME ↗</a>
+    <a href="projects.html" class="mobile-drawer-link active">02 // PROJECTS ↗</a>
+    <a href="contribute.html" class="mobile-drawer-link">03 // HOW TO CONTRIBUTE ↗</a>
+    <a href="community.html" class="mobile-drawer-link">04 // COMMUNITY ↗</a>
+    <a href="events.html" class="mobile-drawer-link">05 // EVENTS & WORKSHOPS ↗</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+    <section class="section-block">
+      <div class="container">
+        
+        <!-- Header -->
+        <div class="section-header-wrap" style="margin-bottom: var(--space-8);">
+          <div>
+            <div class="sys-label">CATALOG/01 — OPEN SOURCE CODEBASES</div>
+            <h1 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 0.5rem;">COMMUNITY REPOSITORIES</h1>
+            <p class="section-lead">
+              Every project listed here is maintained under the official OSCC GitHub organization. Filter by difficulty, search technologies, or pick an issue to start.
+            </p>
+          </div>
+          <div>
+            <a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="btn btn-red">
+              FOLLOW ON GITHUB ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- Search & Filter Controls -->
+        <div class="card-brutal" style="margin-bottom: var(--space-8); padding: var(--space-4);">
+          <div style="display: flex; flex-direction: column; gap: var(--space-4);">
+            <!-- Search Input -->
+            <div style="display: flex; gap: var(--space-2); align-items: center; background: var(--bg-main); border: var(--border-medium); padding: 0.5rem 1rem;">
+              <span style="font-family: var(--font-mono); font-weight: 700; color: var(--oscc-red);">SEARCH_QUERY &gt;</span>
+              <input 
+                type="text" 
+                id="project-search" 
+                placeholder="Filter by name, tech stack (e.g. JavaScript, HTML, IssueOps)..." 
+                style="width: 100%; font-family: var(--font-mono); font-size: var(--text-sm); outline: none; background: transparent;"
+                aria-label="Search repositories"
+              >
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="filter-bar" style="margin-bottom: 0;">
+              <span style="font-family: var(--font-mono); font-size: var(--text-xs); font-weight: 700; text-transform: uppercase; margin-right: 0.5rem;">DIFFICULTY:</span>
+              <button class="filter-btn active" data-filter="all">ALL LEVELS</button>
+              <button class="filter-btn" data-filter="beginner">BEGINNER 🟢</button>
+              <button class="filter-btn" data-filter="intermediate">INTERMEDIATE 🟡</button>
+              <button class="filter-btn" data-filter="advanced">ADVANCED 🔴</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Projects Grid Container -->
+        <div id="projects-grid" class="grid-3" aria-live="polite">
+          <!-- Rendered dynamically by js/projects-filter.js -->
+        </div>
+
+        <!-- Add Your Project Notice -->
+        <div class="card-brutal" style="margin-top: var(--space-16); background: var(--bg-tertiary);">
+          <div class="card-header-bar header-red">
+            <span>SYS/INCUBATOR — PROPOSE A PROJECT</span>
+            <span>OSCC ECOSYSTEM</span>
+          </div>
+          <div class="card-body" style="padding: var(--space-8);">
+            <h3 style="font-size: 1.5rem; text-transform: uppercase; margin-bottom: 0.75rem;">
+              HAVE A STUDENT PROJECT READY FOR OPEN SOURCE?
+            </h3>
+            <p style="font-size: var(--text-sm); color: var(--text-muted); line-height: 1.6; max-width: 750px; margin-bottom: 1.5rem;">
+              If you or your college developer team built a tool, library, or website that solves real problems for students or developers in Odisha, you can propose transferring or hosting it under the OSCC GitHub organization. We provide peer review, contributor visibility, and community stewardship.
+            </p>
+            <a href="https://github.com/Odisha-Students-Code-Community/Connect/issues/new?title=Project+Proposal" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              SUBMIT PROJECT PROPOSAL 💡
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div class="brand-badge" style="width: 32px; height: 32px;">
+              <img src="assets/icons/Logo.png" alt="OSCC">
+            </div>
+            <span style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">OSCC <span class="brand-heart">❤️</span></span>
+          </div>
+          <p>
+            Odisha Students Code Community — an autonomous, student-driven open source community for students across Odisha, India.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="projects.html" class="footer-nav-link">Projects</a></li>
+            <li><a href="contribute.html" class="footer-nav-link">How to Contribute</a></li>
+            <li><a href="community.html" class="footer-nav-link">Community</a></li>
+            <li><a href="events.html" class="footer-nav-link">Events</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>REPOSITORIES</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub Organization ↗</a></li>
+            <li><a href="https://github.com/Odisha-Students-Code-Community/Connect" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Connect Bot ↗</a></li>
+            <li><a href="https://github.com/Odisha-Students-Code-Community/Odisha-Students-Code-Community.github.io" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Website Repository ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CONNECT</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://bsky.app/profile/oscc.bsky.social" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Bluesky ↗</a></li>
+            <li><a href="https://www.linkedin.com/company/odisha-students-code-community/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn ↗</a></li>
+            <li><a href="https://chat.whatsapp.com/invite/OSCC" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Community ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-left">
+          <span>&copy; 2026 Odisha Students Code Community</span>
+          <span>•</span>
+          <span>Open Source (MIT)</span>
+        </div>
+        <div>
+          <span>HOSTED ON GITHUB PAGES</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/projects-filter.js"></script>
+</body>
+</html>

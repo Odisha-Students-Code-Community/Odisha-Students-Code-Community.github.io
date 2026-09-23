@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odisha Students Code Community (OSCC) — We Build in Public ❤️</title>
+  <meta name="description" content="A student-driven, free technology and open-source community for students across Odisha, India. Learn, build, and contribute software in public.">
+  
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://odisha-students-code-community.github.io/">
+  <meta property="og:title" content="Odisha Students Code Community (OSCC) ❤️">
+  <meta property="og:description" content="Students in Odisha building software together — in public. Join our open-source projects, learn Git, and build your portfolio.">
+  <meta property="og:image" content="assets/icons/Full-Logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/icons/Logo.png">
+
+  <!-- Fonts: Space Grotesk, JetBrains Mono, Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="bg-blueprint">
+
+  <!-- Accessibility Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Top Industrial Ticker -->
+  <aside class="sys-ticker-bar" aria-label="System status">
+    <div class="ticker-left">
+      <span class="ticker-status">SYS/STATUS: ONLINE</span>
+      <span>NODE: ODISHA/IN</span>
+      <span>LICENSE: MIT</span>
+    </div>
+    <div class="ticker-right">
+      <span id="ist-clock">IST: --:--:--</span>
+      <span>PUBLIC BUILD v1.0.0</span>
+    </div>
+  </aside>
+
+  <!-- Site Header & Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link" aria-label="OSCC Home">
+        <div class="brand-badge">
+          <img src="assets/icons/Logo.png" alt="OSCC Logo">
+        </div>
+        <div class="brand-info">
+          <span class="brand-title">OSCC <span class="brand-heart">❤️</span></span>
+          <span class="brand-subtitle">Odisha Students Code Community</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="contribute.html" class="nav-link">How to Contribute</a>
+        <a href="community.html" class="nav-link">Community</a>
+        <a href="events.html" class="nav-link">Events</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="https://github.com/Odisha-Students-Code-Community/Connect/issues/new?template=invitation.yml" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-red">
+          JOIN OSCC ⚡
+        </a>
+        <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <nav class="mobile-drawer" aria-label="Mobile Navigation">
+    <a href="index.html" class="mobile-drawer-link active">01 // HOME ↗</a>
+    <a href="projects.html" class="mobile-drawer-link">02 // PROJECTS ↗</a>
+    <a href="contribute.html" class="mobile-drawer-link">03 // HOW TO CONTRIBUTE ↗</a>
+    <a href="community.html" class="mobile-drawer-link">04 // COMMUNITY ↗</a>
+    <a href="events.html" class="mobile-drawer-link">05 // EVENTS & WORKSHOPS ↗</a>
+    <div style="margin-top: var(--space-4); display: flex; flex-direction: column; gap: var(--space-3);">
+      <a href="https://github.com/Odisha-Students-Code-Community/Connect/issues/new?template=invitation.yml" target="_blank" rel="noopener noreferrer" class="btn btn-red">
+        GET COMMUNITY INVITE 💌
+      </a>
+      <a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+        VIEW GITHUB ORG ↗
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- 01 — HERO SECTION -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="sys-label">SYS/01 — MISSION STATEMENT</div>
+            <h1 class="hero-statement">
+              WE BUILD IN <span class="highlight-red">PUBLIC.</span>
+            </h1>
+            <p class="hero-description">
+              <strong>Odisha Students Code Community (OSCC)</strong> is a student-driven, 100% free open-source technology movement. We connect student developers across Odisha to build real software together, learn Git hands-on, and ship public projects.
+            </p>
+            <div class="hero-actions">
+              <a href="projects.html" class="btn btn-red">
+                EXPLORE PROJECTS →
+              </a>
+              <a href="contribute.html" class="btn btn-dark">
+                START CONTRIBUTING →
+              </a>
+              <a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+                GITHUB ORG ↗
+              </a>
+            </div>
+
+            <!-- Stats Strip -->
+            <div class="stats-strip">
+              <div class="stat-box">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">FREE & OPEN SOURCE</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">3+</div>
+                <div class="stat-label">ACTIVE REPOSITORIES</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">30</div>
+                <div class="stat-label">DISTRICTS IN SCOPE</div>
+              </div>
+              <div class="stat-box">
+                <div class="stat-value">0</div>
+                <div class="stat-label">MEMBERSHIP FEES</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 02 — WHAT IS OSCC? -->
+    <section class="section-block bg-alt">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <div class="sys-label">SYS/02 — ARCHITECTURE</div>
+            <h2 class="section-headline">NOT A TUTORIAL. A WORKSHOP.</h2>
+            <p class="section-lead">Students should not only watch videos about coding. They should actually build software together.</p>
+          </div>
+          <div>
+            <span class="badge badge-red">STUDENT RUN // NO CORPORATE JARGON</span>
+          </div>
+        </div>
+
+        <div class="grid-4">
+          <div class="card-brutal">
+            <div class="card-header-bar">01 // BUILD IN PUBLIC</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">PRACTICAL CODE</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Move beyond toy calculator scripts. Write production code, resolve issues, configure CI workflows, and merge pull requests.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-brutal">
+            <div class="card-header-bar">02 // OPEN SOURCE ENTRY</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">FIRST PR READY</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Designed as a welcoming launchpad for first-time contributors with labeled beginner issues, code reviews, and friendly mentorship.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-brutal">
+            <div class="card-header-bar">03 // PAN-ODISHA</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">CROSS-CAMPUS</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Break institutional silos. Collaborate with peers from colleges, polytechnics, and universities across all districts in Odisha.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-brutal">
+            <div class="card-header-bar">04 // TRANSPARENCY</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">ZERO EXPLOITATION</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                No paid certificates, no course upselling, no fake metrics. Everything we build is public and hosted under MIT / open licenses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 — OPEN SOURCE PROJECTS -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <div class="sys-label">PROJECT/03 — CODEBASES</div>
+            <h2 class="section-headline">COMMUNITY REPOSITORIES</h2>
+            <p class="section-lead">Real open-source codebases waiting for your contributions right now.</p>
+          </div>
+          <div>
+            <a href="projects.html" class="btn btn-outline">
+              VIEW ALL PROJECTS →
+            </a>
+          </div>
+        </div>
+
+        <div id="featured-projects-grid" class="grid-3">
+          <!-- Populated by script or static fallback -->
+          <article class="card-brutal">
+            <div class="card-header-bar">
+              <span>REPO: Odisha-Students-Code-Community.github.io</span>
+              <span class="badge diff-beginner">BEGINNER</span>
+            </div>
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.3rem;">OSCC OFFICIAL WEBSITE</h3>
+                <span class="badge badge-active"><span class="status-dot active"></span>ACTIVE</span>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                The official brutalist platform for OSCC. Pure HTML/CSS/JS without bulky frameworks. Designed specifically for students to make their first PR.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+                <span class="tag-stack">HTML5</span>
+                <span class="tag-stack">CSS3</span>
+                <span class="tag-stack">JavaScript</span>
+                <span class="tag-stack">GitHub Pages</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <a href="https://github.com/Odisha-Students-Code-Community/Odisha-Students-Code-Community.github.io" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark">GITHUB ↗</a>
+                <a href="contribute.html" class="btn btn-sm btn-red">CONTRIBUTE 🎯</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-brutal">
+            <div class="card-header-bar">
+              <span>REPO: Connect</span>
+              <span class="badge diff-beginner">BEGINNER</span>
+            </div>
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.3rem;">CONNECT ONBOARDING BOT</h3>
+                <span class="badge badge-active"><span class="status-dot active"></span>ACTIVE</span>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                Automated invite management system. Students open an issue via YAML templates and an IssueOps bot dispatches organization invitations automatically.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+                <span class="tag-stack">GitHub Actions</span>
+                <span class="tag-stack">IssueOps</span>
+                <span class="tag-stack">YAML</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <a href="https://github.com/Odisha-Students-Code-Community/Connect" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark">GITHUB ↗</a>
+                <a href="https://github.com/Odisha-Students-Code-Community/Connect/issues/new?template=invitation.yml" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-red">REQUEST INVITE 💌</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card-brutal">
+            <div class="card-header-bar">
+              <span>REPO: .github</span>
+              <span class="badge diff-beginner">BEGINNER</span>
+            </div>
+            <div class="card-body">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
+                <h3 style="font-size: 1.3rem;">.GITHUB GOVERNANCE</h3>
+                <span class="badge badge-maintenance"><span class="status-dot dev"></span>MAINTENANCE</span>
+              </div>
+              <p style="font-size: var(--text-sm); color: var(--text-muted); line-height: 1.5; margin-bottom: 1rem;">
+                Organization-wide profile, issue and PR templates, community health files, and documentation standards applied across all OSCC repos.
+              </p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
+                <span class="tag-stack">Markdown</span>
+                <span class="tag-stack">Workflows</span>
+                <span class="tag-stack">Templates</span>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <a href="https://github.com/Odisha-Students-Code-Community/.github" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark">GITHUB ↗</a>
+                <a href="contribute.html" class="btn btn-sm btn-outline">DOCS 📄</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 — YOUR FIRST CONTRIBUTION (GIT WORKFLOW) -->
+    <section class="section-block bg-alt">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <div class="sys-label">CONTRIBUTE/04 — PIPELINE</div>
+            <h2 class="section-headline">YOUR FIRST CONTRIBUTION PIPELINE</h2>
+            <p class="section-lead">Open-source isn't magic. It's a standard, repeatable 9-step engineering process.</p>
+          </div>
+          <div>
+            <a href="contribute.html" class="btn btn-red">
+              FULL CONTRIBUTION GUIDE →
+            </a>
+          </div>
+        </div>
+
+        <div class="workflow-track">
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 01</div>
+            <h3 class="workflow-step-title">PICK PROJECT</h3>
+            <p class="workflow-step-desc">Browse our repositories and pick one that interests you.</p>
+            <div class="workflow-step-code">github.com/Odisha-Students-Code-Community</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 02</div>
+            <h3 class="workflow-step-title">FIND AN ISSUE</h3>
+            <p class="workflow-step-desc">Look for tags like <code style="color: var(--oscc-red);">good first issue</code> or <code style="color: var(--oscc-red);">help wanted</code>.</p>
+            <div class="workflow-step-code">label: "good first issue"</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 03</div>
+            <h3 class="workflow-step-title">FORK & CLONE</h3>
+            <p class="workflow-step-desc">Fork repo to your account and clone it to your local machine.</p>
+            <div class="workflow-step-code">git clone https://github.com/YOU/repo.git</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 04</div>
+            <h3 class="workflow-step-title">MAKE A BRANCH</h3>
+            <p class="workflow-step-desc">Never work directly on main. Create a descriptive branch.</p>
+            <div class="workflow-step-code">git checkout -b feat/my-improvement</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 05</div>
+            <h3 class="workflow-step-title">WRITE CODE</h3>
+            <p class="workflow-step-desc">Implement the bug fix or feature according to requirements.</p>
+            <div class="workflow-step-code">git status && git diff</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 06</div>
+            <h3 class="workflow-step-title">TEST LOCALLY</h3>
+            <p class="workflow-step-desc">Verify that everything functions and no errors occur.</p>
+            <div class="workflow-step-code">python -m http.server 8000</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 07</div>
+            <h3 class="workflow-step-title">OPEN A PR</h3>
+            <p class="workflow-step-desc">Push your branch and open a pull request explaining your change.</p>
+            <div class="workflow-step-code">git push origin feat/my-improvement</div>
+          </div>
+
+          <div class="workflow-step-card">
+            <div class="workflow-step-num">STEP // 08</div>
+            <h3 class="workflow-step-title">CODE REVIEW</h3>
+            <p class="workflow-step-desc">Peer reviewers discuss your code and suggest any polish.</p>
+            <div class="workflow-step-code">status: PR Review In Progress</div>
+          </div>
+
+          <div class="workflow-step-card" style="border-color: var(--accent-green);">
+            <div class="workflow-step-num" style="color: var(--accent-green);">STEP // 09</div>
+            <h3 class="workflow-step-title">MERGE & SHIP</h3>
+            <p class="workflow-step-desc">Your code gets merged into production! You are now an open-source contributor.</p>
+            <div class="workflow-step-code">status: MERGED 🎉</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 05 — COMMUNITY PILLARS -->
+    <section class="section-block">
+      <div class="container">
+        <div class="section-header-wrap">
+          <div>
+            <div class="sys-label">COMMUNITY/05 — NETWORK</div>
+            <h2 class="section-headline">HOW OSCC OPERATES</h2>
+            <p class="section-lead">A distributed network connecting student developers across all districts of Odisha.</p>
+          </div>
+          <div>
+            <a href="community.html" class="btn btn-outline">EXPLORE COMMUNITY →</a>
+          </div>
+        </div>
+
+        <div class="grid-3">
+          <div class="card-brutal">
+            <div class="card-header-bar">GENERAL COMMUNITY</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">OPEN TO ALL STUDENTS</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Any student developer, beginner, designer, or tech enthusiast studying in or from Odisha can join for free.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-brutal">
+            <div class="card-header-bar">COLLEGE CHAPTERS</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">CAMPUS INITIATIVES</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Campus leads facilitate peer learning groups, organize hackathon squads, and connect their colleges to OSCC projects.
+              </p>
+            </div>
+          </div>
+
+          <div class="card-brutal">
+            <div class="card-header-bar">PUBLIC GOVERNANCE</div>
+            <div class="card-body">
+              <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">TRANSPARENT GITHUB</h3>
+              <p style="font-size: var(--text-sm); color: var(--text-muted);">
+                Our discussions, roadmaps, project proposals, and reviews happen directly on GitHub Issues and Discussions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 06 — FINAL CTA CALLOUT -->
+    <section class="section-block">
+      <div class="container">
+        <div class="final-cta-box">
+          <div class="sys-label" style="color: #FFE4E4; justify-content: center;">SYS/07 — TAKE ACTION</div>
+          <h2>DON'T JUST LEARN TO CODE.<br>BUILD SOMETHING.</h2>
+          <p>
+            Theory is safe. Shipping code to real repositories builds real careers. Request your invite or make a contribution right now.
+          </p>
+          <div class="final-cta-actions">
+            <a href="https://github.com/Odisha-Students-Code-Community/Connect/issues/new?template=invitation.yml" target="_blank" rel="noopener noreferrer" class="btn btn-dark">
+              JOIN OSCC (GET INVITE) 💌
+            </a>
+            <a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="btn btn-card">
+              EXPLORE GITHUB ORG ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Industrial Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div style="display: flex; align-items: center; gap: 0.5rem;">
+            <div class="brand-badge" style="width: 32px; height: 32px;">
+              <img src="assets/icons/Logo.png" alt="OSCC">
+            </div>
+            <span style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700;">OSCC <span class="brand-heart">❤️</span></span>
+          </div>
+          <p>
+            Odisha Students Code Community — an autonomous, student-driven open source community for students across Odisha, India.
+          </p>
+          <div style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: #888888;">
+            OFFICIAL ORG: <a href="https://github.com/Odisha-Students-Code-Community" style="color: var(--oscc-red-light); text-decoration: underline;">@Odisha-Students-Code-Community</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>NAVIGATION</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="projects.html" class="footer-nav-link">Open Source Projects</a></li>
+            <li><a href="contribute.html" class="footer-nav-link">How to Contribute</a></li>
+            <li><a href="community.html" class="footer-nav-link">Community Network</a></li>
+            <li><a href="events.html" class="footer-nav-link">Events & Workshops</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>OPEN SOURCE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://github.com/Odisha-Students-Code-Community" target="_blank" rel="noopener noreferrer" class="footer-nav-link">GitHub Organization ↗</a></li>
+            <li><a href="https://github.com/Odisha-Students-Code-Community/Connect" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Connect Bot ↗</a></li>
+            <li><a href="https://github.com/Odisha-Students-Code-Community/Odisha-Students-Code-Community.github.io" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Website Repository ↗</a></li>
+            <li><a href="https://github.com/Odisha-Students-Code-Community/.github" target="_blank" rel="noopener noreferrer" class="footer-nav-link">.github Governance ↗</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>COMMUNITY</h4>
+          <ul class="footer-nav-list">
+            <li><a href="https://bsky.app/profile/oscc.bsky.social" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Bluesky ↗</a></li>
+            <li><a href="https://www.linkedin.com/company/odisha-students-code-community/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">LinkedIn ↗</a></li>
+            <li><a href="https://www.instagram.com/oscc.community/" target="_blank" rel="noopener noreferrer" class="footer-nav-link">Instagram ↗</a></li>
+            <li><a href="https://chat.whatsapp.com/invite/OSCC" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Community ↗</a></li>
+            <li><a href="https://whatsapp.com/channel/OSCC" target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Channel ↗</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div class="footer-bottom-left">
+          <span>&copy; <span id="current-year">2026</span> Odisha Students Code Community</span>
+          <span>•</span>
+          <span>Open Source (MIT)</span>
+          <span>•</span>
+          <span>Made with <span class="brand-heart">❤️</span> in Odisha</span>
+        </div>
+        <div>
+          <span>HOSTED ON GITHUB PAGES</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Core Scripts -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

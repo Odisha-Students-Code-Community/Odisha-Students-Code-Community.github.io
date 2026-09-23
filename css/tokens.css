@@ -1,0 +1,87 @@
+/**
+ * ====================================================================
+ * ODISHA STUDENTS CODE COMMUNITY (OSCC) — DESIGN SYSTEM TOKENS
+ * Aesthetic: Industrial Brutalism / Neo-Brutalist
+ * ====================================================================
+ */
+
+:root {
+  /* Brand Palette */
+  --oscc-red: #E52E2E;
+  --oscc-red-dark: #C41F1F;
+  --oscc-red-light: #FF4D4D;
+  --oscc-red-subtle: #FDE8E8;
+
+  /* Neutrals & Monochromes */
+  --bg-main: #F5F2EA;           /* Industrial off-white paper */
+  --bg-card: #FFFFFF;           /* Crisp surface */
+  --bg-dark: #101010;           /* Near black */
+  --bg-dark-surface: #1A1A1A;   /* Technical dark card */
+  --bg-tertiary: #EBE6DA;       /* Secondary neutral */
+  --text-main: #101010;         /* Primary high contrast */
+  --text-inverse: #FFFFFF;      /* Text on dark/red */
+  --text-muted: #555555;        /* Secondary technical details */
+  --text-subtle: #777777;       /* Metadata labels */
+
+  /* Technical Industrial Accents */
+  --accent-amber: #F59E0B;      /* Warning / in-progress */
+  --accent-green: #10B981;      /* System online / active */
+  --accent-blue: #2563EB;       /* Info / issues */
+  --accent-purple: #8B5CF6;     /* Special / releases */
+
+  /* Structural Brutalist Borders */
+  --border-thick: 3px solid #101010;
+  --border-medium: 2px solid #101010;
+  --border-thin: 1px solid #101010;
+  --border-dashed: 2px dashed #101010;
+  --border-red: 3px solid #E52E2E;
+
+  /* Hard Offset Shadows (No soft blurs) */
+  --shadow-none: 0 0 0 transparent;
+  --shadow-xs: 2px 2px 0 #101010;
+  --shadow-sm: 3px 3px 0 #101010;
+  --shadow-md: 4px 4px 0 #101010;
+  --shadow-lg: 6px 6px 0 #101010;
+  --shadow-xl: 8px 8px 0 #101010;
+  --shadow-red: 4px 4px 0 #E52E2E;
+  --shadow-white: 4px 4px 0 #FFFFFF;
+
+  /* Typography Stacks */
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+  /* Type Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1rem;      /* 16px */
+  --text-lg: 1.125rem;    /* 18px */
+  --text-xl: 1.25rem;     /* 20px */
+  --text-2xl: 1.5rem;     /* 24px */
+  --text-3xl: 2rem;       /* 32px */
+  --text-4xl: 2.75rem;    /* 44px */
+  --text-5xl: 3.75rem;    /* 60px */
+  --text-huge: clamp(2.5rem, 6vw, 5.5rem);
+
+  /* Spacing Scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  /* Layout Containers */
+  --container-max: 1240px;
+  --container-wide: 1360px;
+  --header-height: 72px;
+
+  /* Transitions & Tactile Press */
+  --transition-fast: 0.1s ease;
+  --transition-normal: 0.2s ease;
+}
