@@ -8,6 +8,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border-radius: 0 !important; /* STRICT ENFORCEMENT: Industrial sharp corners */
 }
 
 html {
@@ -17,7 +18,12 @@ html {
 }
 
 body {
-  background-color: var(--bg-main);
+  background-color: var(--bg-paper);
+  /* Technical millimeter drafting grid */
+  background-image: 
+    linear-gradient(to right, rgba(13, 13, 13, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(13, 13, 13, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
   color: var(--text-main);
   font-family: var(--font-body);
   font-size: var(--text-base);
@@ -35,12 +41,12 @@ body {
   outline-offset: 3px;
 }
 
-/* Skip link for screen readers & keyboard navigation */
+/* Screen reader skip link */
 .skip-link {
   position: absolute;
   top: -100px;
   left: 1rem;
-  background: var(--bg-dark);
+  background: var(--ink-black);
   color: var(--text-inverse);
   padding: 0.75rem 1.5rem;
   font-family: var(--font-mono);
@@ -50,14 +56,14 @@ body {
   border-color: var(--oscc-red);
   z-index: 9999;
   text-decoration: none;
-  transition: top 0.15s ease-in-out;
+  transition: top var(--snap-quick);
 }
 
 .skip-link:focus {
   top: 1rem;
 }
 
-/* Selection Color */
+/* Text Selection */
 ::selection {
   background-color: var(--oscc-red);
   color: var(--text-inverse);
@@ -66,15 +72,16 @@ body {
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-display);
-  font-weight: 700;
-  line-height: 1.15;
+  font-weight: 800;
+  line-height: 1.1;
   color: var(--text-main);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
 }
 
-h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); text-transform: uppercase; }
-h2 { font-size: clamp(1.8rem, 3.5vw, 2.5rem); text-transform: uppercase; }
-h3 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); }
+h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); }
+h2 { font-size: clamp(1.8rem, 3.8vw, 2.75rem); }
+h3 { font-size: clamp(1.3rem, 2.5vw, 1.85rem); }
 h4 { font-size: var(--text-xl); }
 h5 { font-size: var(--text-lg); }
 h6 { font-size: var(--text-base); }
@@ -98,23 +105,30 @@ code, kbd, samp, pre {
 }
 
 img, svg, picture {
-  display: block;
   max-width: 100%;
-  height: auto;
-}
-
-ul, ol {
-  list-style: none;
+  display: block;
 }
 
 button, input, select, textarea {
-  font: inherit;
-  color: inherit;
-  background: none;
-  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-radius: 0 !important;
 }
 
-/* Industrial Grid Container */
+/* Screen Reader Only Utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Container Constraint */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -125,48 +139,31 @@ button, input, select, textarea {
 }
 
 .container-wide {
-  width: 100%;
   max-width: var(--container-wide);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-4);
-  padding-right: var(--space-4);
 }
 
-/* Industrial Blueprint Grid Background (Subtle) */
-.bg-blueprint {
-  background-size: 32px 32px;
-  background-image: 
-    linear-gradient(to right, rgba(16, 16, 16, 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(16, 16, 16, 0.05) 1px, transparent 1px);
+/* Hazard Warning Band Utility */
+.hazard-stripe {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--ink-black),
+    var(--ink-black) 10px,
+    var(--signal-yellow) 10px,
+    var(--signal-yellow) 20px
+  );
+  height: 8px;
+  width: 100%;
+  border-bottom: 1px solid var(--ink-black);
 }
 
-/* Custom Brutalist Scrollbar */
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--bg-main);
-  border-left: var(--border-medium);
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--bg-dark);
-  border: 2px solid var(--bg-main);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--oscc-red);
-}
-
-/* Reduced Motion Support */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.hazard-stripe-red {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--ink-black),
+    var(--ink-black) 10px,
+    var(--oscc-red) 10px,
+    var(--oscc-red) 20px
+  );
+  height: 8px;
+  width: 100%;
 }

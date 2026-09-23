@@ -1,87 +1,98 @@
 /**
  * ====================================================================
- * ODISHA STUDENTS CODE COMMUNITY (OSCC) — DESIGN SYSTEM TOKENS
- * Aesthetic: Industrial Brutalism / Neo-Brutalist
+ * ODISHA STUDENTS CODE COMMUNITY (OSCC) — DESIGN TOKENS
+ * Aesthetic: Industrial Brutalism / Hardware Workshop / Engineering Blueprint
+ * Strict Rules:
+ *   - Zero soft border-radii (hard rectangular geometries)
+ *   - Solid black ink borders (3px - 4px)
+ *   - High-contrast offset shadows (no blur)
+ *   - Technical monospace metadata & stencil headlines
+ *   - OSCC Red (#D82222) + Heavy Ink (#0D0D0D) + Warm Drafting Paper (#F2EFE9)
  * ====================================================================
  */
 
 :root {
-  /* Brand Palette */
-  --oscc-red: #E52E2E;
-  --oscc-red-dark: #C41F1F;
-  --oscc-red-light: #FF4D4D;
-  --oscc-red-subtle: #FDE8E8;
+  /* Primary Identity Palette */
+  --oscc-red: #D82222;
+  --oscc-red-dark: #B51818;
+  --oscc-red-light: #FF3B3B;
+  --oscc-red-tint: #FFE5E5;
 
-  /* Neutrals & Monochromes */
-  --bg-main: #F5F2EA;           /* Industrial off-white paper */
-  --bg-card: #FFFFFF;           /* Crisp surface */
-  --bg-dark: #101010;           /* Near black */
-  --bg-dark-surface: #1A1A1A;   /* Technical dark card */
-  --bg-tertiary: #EBE6DA;       /* Secondary neutral */
-  --text-main: #101010;         /* Primary high contrast */
-  --text-inverse: #FFFFFF;      /* Text on dark/red */
-  --text-muted: #555555;        /* Secondary technical details */
-  --text-subtle: #777777;       /* Metadata labels */
+  /* Neutrals & Surfaces */
+  --ink-black: #0D0D0D;         /* High-density hardware ink */
+  --ink-dark: #181818;          /* Machine chassis gray */
+  --ink-surface: #222222;       /* Terminal card dark */
+  --bg-paper: #F2EFE9;          /* Heavy drafting / kraft off-white */
+  --bg-paper-alt: #E8E4DB;      /* Blueprint grid secondary neutral */
+  --bg-paper-card: #FFFFFF;     /* Stark white spec sheet surface */
+  --text-main: #0D0D0D;         /* Pure contrast body text */
+  --text-muted: #4B4B4B;        /* Engineering annotations */
+  --text-subtle: #6B6B6B;       /* Technical timestamp labels */
+  --text-inverse: #FFFFFF;      /* Text over black or red */
 
-  /* Technical Industrial Accents */
-  --accent-amber: #F59E0B;      /* Warning / in-progress */
-  --accent-green: #10B981;      /* System online / active */
-  --accent-blue: #2563EB;       /* Info / issues */
-  --accent-purple: #8B5CF6;     /* Special / releases */
+  /* Industrial Caution & Signal Accents */
+  --signal-green: #00DF81;      /* Terminal prompt / Online status */
+  --signal-amber: #FFB800;      /* Warning / Work in Progress */
+  --signal-yellow: #FFDE00;     /* Hazard stripe yellow */
+  --signal-cyan: #00D8FF;       /* IssueOps automation / Git hash */
+  --signal-blue: #0055FF;       /* Blueprint hyperlink */
 
-  /* Structural Brutalist Borders */
-  --border-thick: 3px solid #101010;
-  --border-medium: 2px solid #101010;
-  --border-thin: 1px solid #101010;
-  --border-dashed: 2px dashed #101010;
-  --border-red: 3px solid #E52E2E;
+  /* Structural Hardware Borders */
+  --border-ultra: 4px solid #0D0D0D;
+  --border-thick: 3px solid #0D0D0D;
+  --border-mid: 2px solid #0D0D0D;
+  --border-thin: 1px solid #0D0D0D;
+  --border-dashed: 2px dashed #0D0D0D;
+  --border-red: 3px solid #D82222;
+  --border-green: 2px solid #00DF81;
 
-  /* Hard Offset Shadows (No soft blurs) */
+  /* Hard-Cast Drop Shadows (Absolute zero blur) */
   --shadow-none: 0 0 0 transparent;
-  --shadow-xs: 2px 2px 0 #101010;
-  --shadow-sm: 3px 3px 0 #101010;
-  --shadow-md: 4px 4px 0 #101010;
-  --shadow-lg: 6px 6px 0 #101010;
-  --shadow-xl: 8px 8px 0 #101010;
-  --shadow-red: 4px 4px 0 #E52E2E;
-  --shadow-white: 4px 4px 0 #FFFFFF;
+  --shadow-xs: 2px 2px 0px #0D0D0D;
+  --shadow-sm: 4px 4px 0px #0D0D0D;
+  --shadow-md: 6px 6px 0px #0D0D0D;
+  --shadow-lg: 8px 8px 0px #0D0D0D;
+  --shadow-xl: 12px 12px 0px #0D0D0D;
+  --shadow-red: 5px 5px 0px #D82222;
+  --shadow-white: 4px 4px 0px #FFFFFF;
 
   /* Typography Stacks */
   --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', ui-monospace, SFMono-Regular, monospace;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 
   /* Type Scale */
-  --text-xs: 0.75rem;     /* 12px */
-  --text-sm: 0.875rem;    /* 14px */
-  --text-base: 1rem;      /* 16px */
-  --text-lg: 1.125rem;    /* 18px */
-  --text-xl: 1.25rem;     /* 20px */
-  --text-2xl: 1.5rem;     /* 24px */
-  --text-3xl: 2rem;       /* 32px */
-  --text-4xl: 2.75rem;    /* 44px */
-  --text-5xl: 3.75rem;    /* 60px */
-  --text-huge: clamp(2.5rem, 6vw, 5.5rem);
+  --text-2xs: 0.6875rem; /* 11px */
+  --text-xs: 0.75rem;    /* 12px */
+  --text-sm: 0.875rem;   /* 14px */
+  --text-base: 1rem;     /* 16px */
+  --text-lg: 1.125rem;   /* 18px */
+  --text-xl: 1.25rem;    /* 20px */
+  --text-2xl: 1.5rem;    /* 24px */
+  --text-3xl: 2rem;      /* 32px */
+  --text-4xl: 2.75rem;   /* 44px */
+  --text-5xl: 3.5rem;    /* 56px */
+  --text-huge: clamp(2.4rem, 6.5vw, 5.2rem);
 
-  /* Spacing Scale */
+  /* Spacing Matrix */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
   --space-4: 1rem;
+  --space-5: 1.25rem;
   --space-6: 1.5rem;
   --space-8: 2rem;
   --space-10: 2.5rem;
   --space-12: 3rem;
   --space-16: 4rem;
   --space-20: 5rem;
-  --space-24: 6rem;
 
   /* Layout Containers */
-  --container-max: 1240px;
-  --container-wide: 1360px;
-  --header-height: 72px;
+  --container-max: 1320px;
+  --container-wide: 1440px;
+  --header-height: 74px;
 
-  /* Transitions & Tactile Press */
-  --transition-fast: 0.1s ease;
-  --transition-normal: 0.2s ease;
+  /* Tactile Mechanical Transitions */
+  --snap-quick: 0.1s cubic-bezier(0, 0, 0.2, 1);
+  --snap-spring: 0.18s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }

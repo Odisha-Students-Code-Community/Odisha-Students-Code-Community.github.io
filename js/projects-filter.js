@@ -1,6 +1,7 @@
 /**
  * ====================================================================
  * ODISHA STUDENTS CODE COMMUNITY (OSCC) — PROJECTS FILTER & RENDERER
+ * Aesthetic: Industrial Brutalism Spec Schematics
  * ====================================================================
  */
 
@@ -11,7 +12,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!container) return;
 
   const searchInput = document.getElementById('project-search');
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const filterButtons = document.querySelectorAll('.switch-item, .filter-btn');
 
   let allProjects = [];
   let currentDifficulty = 'all';
@@ -60,10 +61,11 @@ function renderSkeletons(container, count) {
   let html = '';
   for (let i = 0; i < count; i++) {
     html += `
-      <div class="skeleton-card">
-        <div class="skeleton-line short"></div>
-        <div class="skeleton-line medium"></div>
-        <div class="skeleton-line full"></div>
+      <div class="spec-card" style="opacity: 0.6; min-height: 280px; padding: var(--space-6);">
+        <div style="height: 20px; background: #CCCCCC; margin-bottom: var(--space-4);"></div>
+        <div style="height: 14px; width: 70%; background: #E0E0E0; margin-bottom: var(--space-2);"></div>
+        <div style="height: 14px; width: 90%; background: #E0E0E0; margin-bottom: var(--space-4);"></div>
+        <div style="height: 38px; background: #CCCCCC; margin-top: auto;"></div>
       </div>
     `;
   }
@@ -73,63 +75,56 @@ function renderSkeletons(container, count) {
 function renderProjects(projects, container) {
   if (!projects || projects.length === 0) {
     container.innerHTML = `
-      <div class="empty-state" style="grid-column: 1 / -1;">
-        <div class="empty-icon">📁</div>
-        <h3 class="empty-title">NO REPOSITORIES MATCHED</h3>
-        <p class="empty-desc">No OSCC repositories match your current filter or search criteria.</p>
-        <button class="btn btn-sm btn-dark" onclick="window.location.reload()">RESET FILTERS</button>
+      <div class="spec-card" style="grid-column: 1 / -1; padding: var(--space-8); text-align: center;">
+        <h3 class="spec-card-title">NO REPOSITORIES MATCHED</h3>
+        <p class="spec-card-desc">No OSCC codebases match your current search or difficulty filter.</p>
+        <div>
+          <button class="btn btn-sm btn-dark" onclick="window.location.reload()">RESET MATRIX FILTERS</button>
+        </div>
       </div>
     `;
     return;
   }
 
   container.innerHTML = projects.map(proj => {
-    const statusClass = proj.status === 'ACTIVE' ? 'badge-active' :
-                        proj.status === 'IN DEVELOPMENT' ? 'badge-dev' : 'badge-maintenance';
-    
-    const diffClass = proj.difficulty === 'BEGINNER' ? 'diff-beginner' :
-                      proj.difficulty === 'INTERMEDIATE' ? 'diff-intermediate' : 'diff-advanced';
+    const isBeginner = proj.difficulty.toUpperCase() === 'BEGINNER';
+    const tagClass = isBeginner ? 'tag-green' : 'tag-dark';
 
     return `
-      <article class="card-brutal project-card">
-        <div class="card-header-bar">
-          <span>REPO: ${escapeHtml(proj.repoName)}</span>
-          <span class="badge ${diffClass}">${escapeHtml(proj.difficulty)}</span>
+      <article class="spec-card">
+        <div class="spec-card-header">
+          <span class="spec-card-ref">SCHEMATIC: ${escapeHtml(proj.repoName)}</span>
+          <span class="tech-tag ${tagClass}">[${escapeHtml(proj.difficulty)}]</span>
         </div>
-        <div class="card-body">
-          <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.75rem;">
-            <h3 style="font-family: var(--font-display); font-size: 1.35rem; text-transform: uppercase;">
-              ${escapeHtml(proj.name)}
-            </h3>
-            <span class="badge ${statusClass}">
-              <span class="status-dot ${proj.status === 'ACTIVE' ? 'active' : 'dev'}"></span>
-              ${escapeHtml(proj.status)}
-            </span>
+        <div class="spec-card-body">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: var(--space-2); gap: var(--space-2);">
+            <h3 class="spec-card-title" style="font-size: var(--text-xl);">${escapeHtml(proj.name)}</h3>
+            <span class="tech-tag tag-dark">${escapeHtml(proj.status)}</span>
           </div>
 
-          <p style="font-size: var(--text-sm); color: var(--text-muted); line-height: 1.5; margin-bottom: 1.25rem;">
+          <p class="spec-card-desc">
             ${escapeHtml(proj.description)}
           </p>
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem;">
-            ${proj.techStack.map(tech => `<span class="tag-stack">${escapeHtml(tech)}</span>`).join('')}
+          <div class="spec-card-meta">
+            ${proj.techStack.map(tech => `<span class="tech-tag">${escapeHtml(tech)}</span>`).join('')}
           </div>
 
           ${(proj.stars !== undefined || proj.openIssues !== undefined) ? `
-            <div style="display: flex; gap: 1rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--text-subtle); margin-bottom: 1.25rem; border-top: 1px dashed #CCCCCC; padding-top: 0.5rem;">
-              <span>⭐ ${proj.stars ?? 0} stars</span>
-              <span>🍴 ${proj.forks ?? 0} forks</span>
-              <span>📋 ${proj.openIssues ?? 0} issues</span>
+            <div style="display: flex; gap: 1rem; font-family: var(--font-mono); font-size: var(--text-2xs); color: var(--text-subtle); margin-bottom: var(--space-4); border-top: 1px dashed #CCCCCC; padding-top: var(--space-2);">
+              <span>★ ${proj.stars ?? 0} STARS</span>
+              <span>⑂ ${proj.forks ?? 0} FORKS</span>
+              <span>☉ ${proj.openIssues ?? 0} ISSUES</span>
             </div>
           ` : ''}
 
-          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto;">
+          <div class="spec-card-actions">
             <a href="${proj.repoUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-dark">
-              VIEW GITHUB ↗
+              INSPECT CODE ↗
             </a>
             ${proj.goodFirstIssuesUrl ? `
               <a href="${proj.goodFirstIssuesUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-red">
-                GOOD FIRST ISSUES 🎯
+                CLAIM ISSUE ⚡
               </a>
             ` : ''}
           </div>

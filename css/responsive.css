@@ -1,142 +1,139 @@
 /**
  * ====================================================================
  * ODISHA STUDENTS CODE COMMUNITY (OSCC) — RESPONSIVE STYLES
- * Mobile First & Breakpoint Adaptations
+ * Mobile-First & Industrial Adaptability
  * ====================================================================
  */
 
-/* ====================================================================
-   TABLET BREAKPOINT (<= 992px)
-   ==================================================================== */
-@media (max-width: 992px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .mobile-toggle {
-    display: flex;
-  }
-
-  .grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
+/* Laptop & Medium Desktops (max-width: 1180px) */
+@media (max-width: 1180px) {
+  .hero-workbench-grid {
+    grid-template-columns: 1fr;
     gap: var(--space-8);
+  }
+
+  .repos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main-panel {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  .footer-brand-deck {
+    grid-column: span 2;
   }
 }
 
-/* ====================================================================
-   MOBILE BREAKPOINT (<= 768px)
-   ==================================================================== */
-@media (max-width: 768px) {
+/* Tablet (max-width: 900px) */
+@media (max-width: 900px) {
+  .console-nav-rack {
+    display: none;
+  }
+
+  .console-mobile-toggle {
+    display: flex;
+  }
+
+  .engines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .repos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .diagnostic-rack {
+    font-size: 0.65rem;
+  }
+
+  .rack-right span:not(#ist-clock) {
+    display: none;
+  }
+}
+
+/* Mobile Devices (max-width: 640px) */
+@media (max-width: 640px) {
   :root {
     --header-height: 64px;
   }
 
-  .sys-ticker-bar {
-    font-size: 0.65rem;
+  .hero-workbench-section {
+    padding: var(--space-6) 0 var(--space-10);
+  }
+
+  .hero-spec-sheet {
+    padding: var(--space-5);
+  }
+
+  .hero-manifesto-title {
+    font-size: clamp(2rem, 8vw, 2.75rem);
+  }
+
+  .hero-actions-bay {
+    flex-direction: column;
+  }
+
+  .hero-actions-bay .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .pipeline-station {
+    grid-template-columns: 1fr;
+  }
+
+  .station-marker {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--space-3);
+    padding: 0.5rem 1rem;
+    border-right: none;
+    border-bottom: var(--border-thick);
+  }
+
+  .station-content {
+    padding: var(--space-4);
+  }
+
+  .spec-card-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main-panel {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+
+  .footer-brand-deck {
+    grid-column: span 1;
+  }
+
+  .footer-bottom-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .diagnostic-rack {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
     padding: 0.35rem 0.75rem;
   }
 
-  .ticker-right {
-    display: none; /* Keep ticker concise on small screens */
-  }
-
-  .hero-section {
-    padding: var(--space-8) 0 var(--space-10);
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .hero-actions .btn {
-    width: 100%;
-  }
-
-  .grid-4, .grid-3, .grid-2 {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
-  }
-
-  .section-block {
-    padding: var(--space-10) 0;
-  }
-
-  .section-header-wrap {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-2);
-    margin-bottom: var(--space-6);
-  }
-
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-8);
-  }
-
-  .footer-bottom-bar {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-2);
-  }
-
-  .final-cta-box {
-    padding: var(--space-8) var(--space-4);
-  }
-
-  .final-cta-actions {
-    flex-direction: column;
-    width: 100%;
-  }
-
-  .final-cta-actions .btn {
-    width: 100%;
-  }
-
-  /* Workflow mobile adaptation */
-  .workflow-track {
-    grid-template-columns: 1fr;
-  }
-
-  .filter-bar {
-    overflow-x: auto;
-    padding-bottom: var(--space-2);
-    flex-wrap: nowrap;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .filter-btn {
-    white-space: nowrap;
+  .console-actions .btn-github-pill {
+    display: none;
   }
 }
 
-/* ====================================================================
-   SMALL MOBILE BREAKPOINT (<= 480px)
-   ==================================================================== */
-@media (max-width: 480px) {
-  .brand-subtitle {
-    display: none; /* Save navbar space on tiny screens */
-  }
-
-  .brand-badge {
-    width: 36px;
-    height: 36px;
-  }
-
-  .btn {
-    padding: 0.75rem 1.25rem;
-    font-size: var(--text-xs);
-  }
-
-  .stat-value {
-    font-size: 1.85rem;
+/* Reduced Motion for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
