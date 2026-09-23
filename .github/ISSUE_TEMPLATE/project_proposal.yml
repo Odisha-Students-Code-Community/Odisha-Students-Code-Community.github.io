@@ -1,0 +1,34 @@
+name: Open Source Project Proposal
+description: Propose hosting or incubating a student-built project under OSCC
+title: "proposal: "
+labels: ["project-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: Built an open-source tool, library, or website for students in Odisha? Propose it for incubation under OSCC! 🚀
+  - type: input
+    id: project_name
+    attributes:
+      label: Project Name
+    validations:
+      required: true
+  - type: textarea
+    id: overview
+    attributes:
+      label: What does the project do?
+      description: Explain the problem it solves and its target audience.
+    validations:
+      required: true
+  - type: input
+    id: tech_stack
+    attributes:
+      label: Technology Stack
+      placeholder: e.g. Python, React, Go, HTML/CSS
+    validations:
+      required: true
+  - type: input
+    id: repo_link
+    attributes:
+      label: Existing Repository URL (if already on GitHub)
+    validations:
+      required: false

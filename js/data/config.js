@@ -70,9 +70,9 @@ export const siteConfig = {
   // Main Navigation Structure
   navigation: [
     { label: "Home", href: "index.html" },
-    { label: "Projects", href: "projects.html" },
-    { label: "How to Contribute", href: "contribute.html" },
-    { label: "Community", href: "community.html" },
-    { label: "Events", href: "events.html" }
+    { label: "Projects", href: "pages/projects.html" },
+    { label: "How to Contribute", href: "pages/contribute.html" },
+    { label: "Community", href: "pages/community.html" },
+    { label: "Events", href: "pages/events.html" }
   ]
 };

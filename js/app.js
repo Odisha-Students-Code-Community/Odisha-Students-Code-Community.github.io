@@ -122,7 +122,9 @@ function highlightActiveNavLink() {
   const currentPath = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('.nav-link, .mobile-drawer-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    if (!href) return;
+    const hrefBase = href.split('/').pop();
+    if (hrefBase === currentPath || ((currentPath === '' || currentPath === 'index.html') && hrefBase === 'index.html')) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');

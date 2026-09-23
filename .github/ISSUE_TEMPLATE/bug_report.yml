@@ -1,0 +1,33 @@
+name: Bug Report
+description: Report a broken layout, script error, or broken link
+title: "fix: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for reporting an issue to Odisha Students Code Community (OSCC)! ❤️
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: How can maintainers reproduce the issue?
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. See error
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Device & Browser
+      description: e.g. Windows 11 Chrome, Android Chrome, iPhone Safari
+    validations:
+      required: false

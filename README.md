@@ -27,33 +27,30 @@ This website is engineered with an **Industrial Brutalism / Neo-Brutalist** aest
 ```text
 Odisha-Students-Code-Community.github.io/
 ├── index.html              # Main OSCC homepage
-├── projects.html           # Open source project directory & filter
-├── contribute.html         # Beginner-friendly 9-step Git guide
-├── community.html          # Community values, college leads, safety charter
-├── events.html             # Events & workshops board
 ├── 404.html                # Custom industrial 404 handler
-├── assets/
-│   └── icons/
-│       ├── Logo.png        # Official OSCC square logo (767x767)
-│       └── Full-Logo.png   # Official OSCC full banner logo (1022x767)
-├── css/
-│   ├── tokens.css          # Color palette, spacing, and brutalist tokens
-│   ├── base.css            # Reset, typography, accessibility skip-links
-│   ├── components.css      # Tactile buttons, cards, badges, terminals
-│   ├── layout.css          # Ticker, navbar, hero, workflow, footer
-│   └── responsive.css      # Mobile drawer, breakpoint reflows
-├── js/
-│   ├── app.js              # Clock, mobile drawer, clipboard copy logic
-│   ├── github-api.js       # Resilient API client with sessionStorage caching
-│   ├── projects-filter.js  # Live search & difficulty filter
-│   └── data/
-│       ├── config.js       # Organization metadata & verified social links
-│       ├── projects.js     # Verified OSCC repositories schema
-│       ├── community.js    # Values, contribution pathways, safety charter
-│       └── events.js       # Workshop/event feed & proposal guide
+├── .nojekyll               # Disables Jekyll processing on GitHub Pages
+├── .gitignore              # Ignores local prompts & environment files
+├── robots.txt              # Search engine crawler directives
+├── sitemap.xml             # XML sitemap for SEO indexing
+├── LICENSE                 # MIT License
+├── README.md               # Repository documentation
 ├── CONTRIBUTING.md         # Student contribution guidelines
 ├── CODE_OF_CONDUCT.md     # Community code of conduct
-└── README.md               # Repository documentation
+├── .github/
+│   ├── ISSUE_TEMPLATE/     # Bug report, feature request & project proposals
+│   └── PULL_REQUEST_TEMPLATE.md
+├── pages/                  # Dedicated multi-page directory
+│   ├── projects.html       # Open source project directory & filter
+│   ├── contribute.html     # Beginner-friendly 9-step Git guide
+│   ├── community.html      # Values, college leads & safety charter
+│   └── events.html         # Schedule board & workshop proposal guide
+├── assets/
+│   └── icons/              # Official OSCC brand assets (Logo & Full Banner)
+├── css/                    # Industrial Brutalism design system tokens & layouts
+│   ├── tokens.css, base.css, components.css, layout.css, responsive.css
+└── js/                     # Data layer, GitHub API cache & runtime controllers
+    ├── app.js, github-api.js, projects-filter.js
+    └── data/ (config.js, projects.js, community.js, events.js)
 ```
 
 ---
